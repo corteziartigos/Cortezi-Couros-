@@ -1,0 +1,299 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Cortezi Representações | Artigos de Couro</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        leather: {
+                            100: '#F5F0EB',
+                            200: '#E1D3C1',
+                            300: '#C7A985',
+                            400: '#A67B4F',
+                            500: '#8B5A2B', // Main brand color (Saddle Brown)
+                            600: '#6B4226',
+                            700: '#4A2E1B', // Dark Leather
+                            800: '#321D10',
+                            900: '#1A0E07',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for subtle animations */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-leather-100 antialiased selection:bg-leather-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="ph ph-bag text-3xl text-leather-600"></i>
+                    <div class="flex flex-col">
+                        <span class="font-serif font-bold text-2xl text-leather-800 leading-none">Mac Cortezi</span>
+                        <span class="text-[10px] tracking-widest text-leather-500 uppercase font-semibold">Representações</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-600 hover:text-leather-600 font-medium transition-colors">Início</a>
+                    <a href="#sobre" class="text-gray-600 hover:text-leather-600 font-medium transition-colors">Sobre Nós</a>
+                    <a href="#produtos" class="text-gray-600 hover:text-leather-600 font-medium transition-colors">Produtos</a>
+                    <a href="#contato" class="bg-leather-600 text-white px-5 py-2 rounded-full font-medium hover:bg-leather-700 transition-colors shadow-md hover:shadow-lg">Fale Conosco</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-leather-600 focus:outline-none" aria-label="Abrir menu">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 text-center flex flex-col gap-4 mt-4">
+                <a href="#inicio" class="block text-gray-600 hover:text-leather-600 font-medium text-lg">Início</a>
+                <a href="#sobre" class="block text-gray-600 hover:text-leather-600 font-medium text-lg">Sobre Nós</a>
+                <a href="#produtos" class="block text-gray-600 hover:text-leather-600 font-medium text-lg">Produtos</a>
+                <a href="#contato" class="block text-leather-600 font-bold text-lg">Fale Conosco</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative pt-20 min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-leather-900 via-leather-800 to-leather-950">
+        <!-- Stylized Geometric Pattern Background -->
+        <div class="absolute inset-0 z-0 opacity-15" style="background-image: radial-gradient(#C7A985 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-leather-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-leather-500/20 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left flex flex-col md:items-start items-center my-12">
+            <span class="text-leather-300 font-semibold tracking-wider uppercase text-sm mb-4 block fade-in-up">Tradição & Qualidade</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight fade-in-up delay-100 max-w-3xl">
+                Excelência em representação de artigos de couro.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl font-light fade-in-up delay-200">
+                Conectamos as melhores manufaturas de couro legítimo aos lojistas mais exigentes do mercado. Garantia de sofisticação e durabilidade.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 fade-in-up delay-300">
+                <a href="#produtos" class="bg-leather-500 hover:bg-leather-400 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl text-lg flex items-center justify-center gap-2">
+                    Conheça a Linha <i class="ph ph-arrow-right"></i>
+                </a>
+                <a href="#contato" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-medium transition-all text-lg flex items-center justify-center">
+                    Seja um Parceiro
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Text Content -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-[1px] w-12 bg-leather-500"></div>
+                        <span class="text-leather-600 font-semibold tracking-wider uppercase text-sm">Nossa História</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-leather-900 mb-6">
+                        Experiência que faz a diferença no mercado coureiro.
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A <strong>Mac Cortezi Representações</strong> atua com maestria na intermediação entre grandes fabricantes de artigos de couro e lojistas. Nosso compromisso é entregar não apenas produtos, mas valor agregado através de peças de design exclusivo e acabamento impecável.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Entendemos as tendências do mercado e as necessidades do varejo. Trabalhamos exclusivamente com couro legítimo, garantindo que nossos parceiros tenham em suas vitrines o que há de melhor e mais durável no segmento.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-4 border-leather-400 pl-4">
+                            <h4 class="font-serif font-bold text-2xl text-leather-800">100%</h4>
+                            <span class="text-sm text-gray-500">Couro Legítimo</span>
+                        </div>
+                        <div class="border-l-4 border-leather-400 pl-4">
+                            <h4 class="font-serif font-bold text-2xl text-leather-800">B2B</h4>
+                            <span class="text-sm text-gray-500">Foco no Varejo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
+                    <div class="bg-leather-50 p-6 rounded-2xl border border-leather-200/80 shadow-sm flex flex-col justify-between">
+                        <div class="w-12 h-12 bg-leather-600 text-white rounded-xl flex items-center justify-center mb-4 text-2xl shadow-md">
+                            <i class="ph ph-shield-check"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-leather-900 mb-2">Garantia & Procedência</h3>
+                        <p class="text-gray-600 text-sm">Artigos rigorosamente selecionados com alto padrão de acabamento e costura.</p>
+                    </div>
+
+                    <div class="bg-leather-900 p-6 rounded-2xl text-white shadow-xl flex flex-col justify-between sm:mt-8">
+                        <div class="w-12 h-12 bg-leather-500 text-white rounded-xl flex items-center justify-center mb-4 text-2xl shadow-md">
+                            <i class="ph ph-handshake"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-white mb-2">Representação Exclusiva</h3>
+                        <p class="text-leather-200 text-sm">Parcerias estratégicas trazendo as melhores oportunidades diretamente das fábricas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="py-24 bg-leather-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-leather-600 font-semibold tracking-wider uppercase text-sm mb-2 block">Nosso Portfólio</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-leather-900 mb-4">
+                    O que representamos
+                </h2>
+                <p class="text-gray-600">
+                    Trabalhamos com uma curadoria rigorosa das melhores fábricas. Oferecemos coleções completas com excelentes margens para a sua loja.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-leather-200/80 text-center flex flex-col items-center justify-between">
+                    <div class="w-full flex flex-col items-center">
+                        <div class="w-20 h-20 bg-leather-100 group-hover:bg-leather-600 text-leather-600 group-hover:text-white rounded-2xl flex items-center justify-center text-4xl mb-6 transition-all duration-300 shadow-inner">
+                            <i class="ph ph-handbag"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-leather-900 mb-2">Bolsas</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Executivas, casuais e de viagem em couro legítimo com design atemporal.</p>
+                    </div>
+                    <div class="w-full pt-4 border-t border-leather-100 mt-2">
+                        <span class="text-xs font-semibold text-leather-500 uppercase tracking-wider block mb-1">Preço Atacado / Faturamento</span>
+                        <div class="text-2xl font-bold text-leather-900">A partir de <span class="text-leather-600">R$ 149,90</span></div>
+                        <span class="text-xs text-gray-500 mt-1 block">Sugerido Varejo: R$ 299,00+</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-leather-200/80 text-center flex flex-col items-center justify-between">
+                    <div class="w-full flex flex-col items-center">
+                        <div class="w-20 h-20 bg-leather-100 group-hover:bg-leather-600 text-leather-600 group-hover:text-white rounded-2xl flex items-center justify-center text-4xl mb-6 transition-all duration-300 shadow-inner">
+                            <i class="ph ph-wallet"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-leather-900 mb-2">Carteiras</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Modelos masculinos e femininos com acabamento premium e alta durabilidade.</p>
+                    </div>
+                    <div class="w-full pt-4 border-t border-leather-100 mt-2">
+                        <span class="text-xs font-semibold text-leather-500 uppercase tracking-wider block mb-1">Preço Atacado / Faturamento</span>
+                        <div class="text-2xl font-bold text-leather-900">A partir de <span class="text-leather-600">R$ 39,90</span></div>
+                        <span class="text-xs text-gray-500 mt-1 block">Sugerido Varejo: R$ 89,00+</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-leather-200/80 text-center flex flex-col items-center justify-between">
+                    <div class="w-full flex flex-col items-center">
+                        <div class="w-20 h-20 bg-leather-100 group-hover:bg-leather-600 text-leather-600 group-hover:text-white rounded-2xl flex items-center justify-center text-4xl mb-6 transition-all duration-300 shadow-inner">
+                            <i class="ph ph-belt"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-leather-900 mb-2">Cintos e Acessórios</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Acabamento refinado, fivelas exclusivas e seleção de materiais nobres.</p>
+                    </div>
+                    <div class="w-full pt-4 border-t border-leather-100 mt-2">
+                        <span class="text-xs font-semibold text-leather-500 uppercase tracking-wider block mb-1">Preço Atacado / Faturamento</span>
+                        <div class="text-2xl font-bold text-leather-900">A partir de <span class="text-leather-600">R$ 29,90</span></div>
+                        <span class="text-xs text-gray-500 mt-1 block">Sugerido Varejo: R$ 69,00+</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-leather-200/80 text-center flex flex-col items-center justify-between">
+                    <div class="w-full flex flex-col items-center">
+                        <div class="w-20 h-20 bg-leather-100 group-hover:bg-leather-600 text-leather-600 group-hover:text-white rounded-2xl flex items-center justify-center text-4xl mb-6 transition-all duration-300 shadow-inner">
+                            <i class="ph ph-sneaker"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-leather-900 mb-2">Calçados</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">Sapatos sociais e casuais em couro que unem alto conforto e sofisticação.</p>
+                    </div>
+                    <div class="w-full pt-4 border-t border-leather-100 mt-2">
+                        <span class="text-xs font-semibold text-leather-500 uppercase tracking-wider block mb-1">Preço Atacado / Faturamento</span>
+                        <div class="text-2xl font-bold text-leather-900">A partir de <span class="text-leather-600">R$ 119,90</span></div>
+                        <span class="text-xs text-gray-500 mt-1 block">Sugerido Varejo: R$ 249,00+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-leather-900 text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div>
+                    <span class="text-leather-300 font-semibold tracking-wider uppercase text-sm mb-2 block">Parceria Estratégica</span>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
+                        Vamos impulsionar as suas vendas?
+                    </h2>
+                    <p class="text-leather-100 mb-10 text-lg font-light">
+                        Entre em contato conosco para conhecer nossos catálogos completos, solicitar visitas comerciais e estabelecer uma parceria de sucesso para a sua loja.
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-leather-800 flex items-center justify-center flex-shrink-0 border border-leather-700">
+                                <i class="ph ph-envelope-simple text-2xl text-leather-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-leather-300 text-sm uppercase tracking-wider mb-1">E-mail Comercial</h4>
+                                <a href="mailto:corteziartigos02@gmail.com" class="text-xl font-medium hover:text-leather-400 transition-colors">
+                                    corteziartigos02@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- CNPJ -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-leather-800 flex items-center justify-center flex-shrink-0 border border-leather-700">
+                                <i class="ph ph-identification-card text-2xl text-leather-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-leather-300 text-sm uppercase tracking-wider mb-1"
